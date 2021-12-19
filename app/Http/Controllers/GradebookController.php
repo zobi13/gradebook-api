@@ -150,11 +150,4 @@ class GradebookController extends Controller
         
         return response()->json([$gradebook, $teacher]);
     }
-
-    // public function addGradebookPage()
-    // {
-    //     $availableTeachers = User::where('is_teacher', 0)->get();
-
-    //     return response()->json($availableTeachers);
-    // }
 }

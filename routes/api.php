@@ -20,7 +20,7 @@ use App\Http\Controllers\TeacherController;
 */
 
 //gradebooks
-Route::get('/', [GradebookController::class, 'index'])
+Route::get('/gradebooks', [GradebookController::class, 'index'])
     ->middleware('auth:api');
 Route::get('/gradebooks/create', [GradebookController::class, 'create'])
     ->middleware('auth:api');
