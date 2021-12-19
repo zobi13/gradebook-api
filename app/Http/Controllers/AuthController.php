@@ -13,6 +13,7 @@ class AuthController extends Controller
     public function register(RegisterRequest $request)
     {
         $data = $request->validated();
+        $data['is_teacher'] = 0;
 
         $data['password'] = Hash::make($data['password']);
         $user = User::create($data);
@@ -22,6 +23,7 @@ class AuthController extends Controller
         return response()->json([
             'token' => $token,
             'user' => $user
+            // $data
         ]);
     }
 
